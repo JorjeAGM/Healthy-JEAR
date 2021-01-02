@@ -24,7 +24,7 @@ Widget login() {
         ),
         SlimyCard(
           color: Colors.blue,
-          topCardHeight: 350,
+          topCardHeight: 400,
           topCardWidget: CardTop(),
           bottomCardHeight: 280,
           bottomCardWidget: CardBottom(),

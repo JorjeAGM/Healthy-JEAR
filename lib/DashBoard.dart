@@ -80,7 +80,7 @@ class _MenuLateralState extends State<MenuLateral> {
                 trailing: Icon(Icons.local_gas_station),
                 onTap: () {
                   Navigator.pushNamed(context, '/Login');
-                }),    
+                }),
           ],
         )));
   }

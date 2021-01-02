@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:healthyjear/Login.dart';
-//import 'package:splashscreen/splashscreen.dart';
+import 'package:healthyjear/Enfermedad.dart';
+import 'package:healthyjear/Informacion/Edad.dart';
+import 'package:healthyjear/Informacion/Estatura.dart';
+import 'package:healthyjear/Informacion/Inicio.dart';
+import 'package:healthyjear/Informacion/Nombre.dart';
 
 class SpS extends StatefulWidget {
-  SpS({Key key}) : super(key: key);
-
   @override
   _SpSState createState() => _SpSState();
 }
@@ -27,7 +27,8 @@ class _SpSState extends State<SpS> {
 
   void _navigate() {
     Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (BuildContext context) => Login()));
+        //MaterialPageRoute(builder: (BuildContext context) => Enfermedad()));
+        MaterialPageRoute(builder: (BuildContext context) => Inicio()));
   }
 
   @override

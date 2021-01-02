@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:healthyjear/Informacion/Alimentos.dart';
+import 'package:healthyjear/Informacion/Dieta.dart';
+import 'package:healthyjear/Informacion/Edad.dart';
+import 'package:healthyjear/Informacion/Estatura.dart';
+import 'package:healthyjear/Informacion/Nombre.dart';
+import 'package:healthyjear/Informacion/Peso.dart';
+import 'package:healthyjear/Informacion/analisis.dart';
+import 'package:healthyjear/Informacion/enfermedades.dart';
+import 'package:healthyjear/Informacion/paquetes.dart';
 import 'package:healthyjear/Login.dart';
+import 'package:healthyjear/Enfermedad.dart';
 import 'package:healthyjear/SpS.dart';
 import 'DashBoard.dart';
 /*import 'package:splashscreen/splashscreen.dart';*/
 import 'package:healthyjear/Verduras.dart';
 import 'package:healthyjear/Frutas.dart';
-import 'package:healthyjear/Enfermedad.dart';
 import 'package:healthyjear/Info.dart';
+
+import 'Informacion/Inicio.dart';
 
 ////////////////////////////// Main ///////////////////////////////////
 void main() => runApp(Healthy_JEAR());
@@ -16,18 +27,30 @@ class Healthy_JEAR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Healthy-JEAR",
+      title: 'Healthy-JEAR',
       home: SpS(),
-      
-
       routes: {
-      '/Home' : (context) => DashBoard(),
-      '/Verduras' : (context) => Verduras(),
-      '/Frutas' : (context) => Frutas(),
-      '/Enfermedad' : (context) => Enfermedad(),
-      '/Info' : (context) => Info(),
-      '/Login' : (context) => Login(),
-    },
+        '/Home': (BuildContext context) => DashBoard(),
+        '/Inicio': (BuildContext context) => Inicio(),
+        '/Alimentos': (BuildContext context) => Alimentos(),
+        '/Enfermedades': (BuildContext context) => enfermedades(),
+        '/paquetes': (BuildContext context) => paquetes(),
+        '/Analisis': (BuildContext context) => analisis(),
+        '/Dieta': (BuildContext context) => Dieta(),
+        '/Nombre': (BuildContext context) => Nombre(),
+        '/Verduras': (BuildContext context) => Verduras(),
+        '/Frutas': (BuildContext context) => Frutas(),
+        '/Info': (BuildContext context) => Info(),
+        '/Login': (BuildContext context) => Login(),
+        '/SpS': (BuildContext context) => SpS(),
+        '/Edad': (BuildContext context) => Edad(),
+        '/Estatura': (BuildContext context) => Estatura(),
+        '/Peso': (BuildContext context) => Peso(),
+        '/Enfermedad': (BuildContext context) => Enfermedad(),
+        '/pag1': (BuildContext context) => Enfermedad().websides(context),
+        '/Obesidad': (BuildContext context) => Enfermedad().build(context),
+        '/Desnutricion': (BuildContext context) => Enfermedad().build2(context)
+      },
     );
   }
 }
